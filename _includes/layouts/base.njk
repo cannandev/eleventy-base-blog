@@ -18,7 +18,9 @@
     <main {% if templateClass %} class="{{ templateClass }}" {% endif %}>
       {{ content | safe }}
     </main>
-    <footer></footer>
+    <footer>
+			{% include "footer.njk" %}
+		</footer>
     <!-- Current page:{{ page.url | url }} -->
   </body>
 </html>
