@@ -1,0 +1,24 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-list
+---
+<h1>{{ title }} Articles</h1>
+
+{{ content | safe }}
+
+<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+{%- for tag in tags | filterTagList -%}
+{%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
+<a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+{%- endfor %}
+
+{% set navPages = collections.all | eleventyNavigation( title ) %}
+<ul>
+{%- for entry in navPages %}
+  <li{% if entry.url == page.url %} class="my-active-class"{% endif %}>
+    <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+  </li>
+{%- endfor %}
+</ul>
+
+
