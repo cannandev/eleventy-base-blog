@@ -1,18 +1,18 @@
-<ol reversed class="postlist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
-  {% for post in postslist | reverse %}
-    <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-      <a href="{{ post.url | url }}" class="postlist-link">
-        {% if post.data.title %}
-          {{ post.data.title }}
-        {% else %}
-          <code>{{ post.url }}</code>
-        {% endif %}
-      </a>
-      <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-      {% for tag in post.data.tags | filterTagList %}
-        {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-        <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-      {% endfor %}
-    </li>
-  {% endfor %}
-</ol>
+{% for post in postslist | reverse %}
+  <article class="postlist-item">
+		<span>category label</span>
+		<h2><a href="{{ post.url | url }}" class="postlist-link">
+      {% if post.data.title %}
+        {{ post.data.title }}
+      {% else %}
+        <code>{{ post.url }}</code>
+      {% endif %}
+    </a></h2>
+		<ul>
+			<li><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></li>
+			<li>111 Shares</li>
+			<li>5 min read</li>
+		</ul>
+		<p>Provident temporibus adipisci ipsam non praesentium ea, mollitia reiciendis repellat labore, consequatur blanditiis nesciunt, libero voluptas odio...</p>
+	</article>
+{% endfor %}

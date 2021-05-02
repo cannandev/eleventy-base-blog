@@ -7,6 +7,7 @@
   --navy: #17050F;
   --blue: #082840;
   --white: #fff;
+  --yellow: #f60
 }
 
 
@@ -205,14 +206,6 @@ code {
   align-items: baseline;
   counter-increment: start-from -1;
   line-height: 1.8;
-}
-
-.postlist-item:before {
-  display: inline-block;
-  pointer-events: none;
-  content: "" counter(start-from, decimal-leading-zero) ". ";
-  line-height: 100%;
-  text-align: right;
 }
 
 .postlist-date,
