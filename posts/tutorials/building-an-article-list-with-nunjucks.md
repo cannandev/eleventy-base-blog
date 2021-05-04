@@ -50,3 +50,9 @@ eleventyComputed:
 Something I desired in jekyll liquid templates.
 
 To make this global for all posts, I created `posts/posts.eleventyComputed.js`
+
+Turns out, using Javascript data files are faster than setting this data in front matter. So let's move this setting to `tutorials/tuorials.11tydata.js`
+
+#### References
+* [Javascript Data Files](https://www.11ty.dev/docs/data-js/#javascript-data-files)
+* [Data Cascade](https://www.11ty.dev/docs/data-cascade/)
