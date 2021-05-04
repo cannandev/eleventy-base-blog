@@ -11,7 +11,7 @@
 		<ul>
 			<li><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></li>
 			<li>111 Shares</li>
-			<li>5 min read</li>
+			<li>{{ 'text' | timeToRead }} min read</li>
 		</ul>
 		<p>{{post.data.description}}</p>
 	</article>
