@@ -6,5 +6,8 @@ tags:
   - jekyll
   - netlify cms
   - i18n
-
+featured: true
+image:
+  file:
+  alttext: Developer
 ---

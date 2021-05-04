@@ -1,13 +1,19 @@
 <div class="hero">
-	<article>
-		<span>{{ post.data.parent }}</span
-		<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id illum minima odit corrupti nesciunt saepe quidem, excepturi totam explicabo.</h1>
+	<article class="article--featured">
+		<span>{{ post.data.parent }}</span>
+		<h1><a href="{{ post.url | url }}" class="postlist-link">
+      {% if post.data.title %}
+        {{ post.data.title }}
+      {% else %}
+        <code>{{ post.url }}</code>
+      {% endif %}
+    </a></h1>
 		<ul>
-			<li>May 15, 2021</li>
+			<li><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></li>
 			<li>111 Shares</li>
 			<li>{{ 'text' | timeToRead }} min read</li>
 		</ul>
-		<p>Provident temporibus adipisci ipsam non praesentium ea, mollitia reiciendis repellat labore, consequatur blanditiis nesciunt, libero voluptas odio...</p>
+		<p>{{post.data.description}}</p>
 		<a href="/">Read more button</a>
 		<div class="article__img">
 			<img src="/img/pen-tool-amico.png" alt="Black female designer with a giant pen and compass.">

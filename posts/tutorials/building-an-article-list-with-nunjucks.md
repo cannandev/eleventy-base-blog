@@ -31,7 +31,6 @@ Use semantic elements to make sure they're accessible. Not worried about styles 
 		<p>{{post.data.description}}</p>
 	</article>
 {% endfor %}
-
 ```
 ## 3. Architecture - Article Parent/Child relationships
 Organize posts in post folder. To create subdirectories, add index.md in each one with `title` and `parent` keys. These index pages will serve as category pages, listing all articles that belong to that category (parent). Then, create other articles in the subdirectory.
@@ -48,11 +47,15 @@ eleventyComputed:
 
 Something I desired in jekyll liquid templates.
 
-To make this global for all posts, I created `posts/posts.eleventyComputed.js`
-
-Turns out, using Javascript data files are faster than setting this data in front matter. So let's move this setting to `tutorials/tuorials.11tydata.js`
-
-## 4. Output article list per category
+Turns out, using Javascript data files are faster than setting this data in front matter. So let's move this setting to `tutorials/tutorials.11tydata.js`. I'll break down each line of this file.
+```
+<code>some</code>
+```
+## 4. Getting categories
+Now that we've set the parent of each post, we can print the values in our template.
+```
+<span>{{ post.data.parent }}</span>
+```
 
 #### References
 * [Javascript Data Files](https://www.11ty.dev/docs/data-js/#javascript-data-files)
