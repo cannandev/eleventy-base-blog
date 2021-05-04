@@ -1,6 +1,6 @@
 module.exports = {
   layout: "layouts/post.njk",
-  parent: "Fireside Chat",
+  parent: "Fireside Chats",
   eleventyComputed: {
     eleventyNavigation: {
       key: data => data.title,
