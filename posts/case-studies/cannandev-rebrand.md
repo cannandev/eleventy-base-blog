@@ -6,7 +6,6 @@ tags:
   - nunjucks
   - eleventy
   - minorities in tech
-layout: layouts/post.njk
 ---
 ## Accessible
 Lighthouse score before and now. Screen reader-friendly, functional images (not just decorative), color contrast, keyboard accessible, semantic headings, page flow of landmarks.

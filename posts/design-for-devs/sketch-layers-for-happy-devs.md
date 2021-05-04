@@ -5,5 +5,13 @@ date: 2021-05-03
 tags:
   - design
   - balsamiq
-layout: layouts/post.njk
+
 ---
+Design tool hacks for happy devs!
+
+## Name your layers.
+## Create reusable symbols.
+
+## Use headings.
+
+## Keep colors consistent.

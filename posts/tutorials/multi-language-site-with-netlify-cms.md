@@ -6,5 +6,5 @@ tags:
   - jekyll
   - netlify cms
   - i18n
-layout: layouts/post.njk
+
 ---

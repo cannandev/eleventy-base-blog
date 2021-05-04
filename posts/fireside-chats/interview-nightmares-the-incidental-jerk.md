@@ -4,5 +4,5 @@ description: This is a post about a horrible interview I had and what it taught 
 date: 2018-05-01
 tags:
   - interviews
-layout: layouts/post.njk
+
 ---

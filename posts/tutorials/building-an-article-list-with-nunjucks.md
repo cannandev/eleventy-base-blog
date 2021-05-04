@@ -5,7 +5,7 @@ date: 2021-05-03
 tags:
   - eleventy
   - nunjucks
-layout: layouts/post.njk
+
 ---
 
 ## 1. Use postslist.njk as a starter

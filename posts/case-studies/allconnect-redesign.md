@@ -5,7 +5,7 @@ date: 2018-05-01
 tags:
   - drupal
   - architecture
-layout: layouts/post.njk
+
 ---
 Allconnect is a free resource that simplifies how you shop for home services. Learn how the UX team redesigned this website and innovated a new platform to make content updates easy and safe!
 

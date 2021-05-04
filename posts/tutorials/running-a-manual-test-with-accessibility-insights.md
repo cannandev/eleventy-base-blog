@@ -4,5 +4,4 @@ description: This is a post on a great, free accessibility tool.
 date: 2018-05-02
 tags:
   - a11y
-layout: layouts/post.njk
 ---

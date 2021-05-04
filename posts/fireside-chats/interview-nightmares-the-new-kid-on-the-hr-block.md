@@ -4,5 +4,5 @@ description: This is a post about a horrible interview. The young lady interview
 date: 2018-05-02
 tags:
   - interviews
-layout: layouts/post.njk
+
 ---

@@ -4,5 +4,5 @@ description: This is a post about a horrible phone interview with an outsourced 
 date: 2018-05-02
 tags:
   - interviews
-layout: layouts/post.njk
+
 ---

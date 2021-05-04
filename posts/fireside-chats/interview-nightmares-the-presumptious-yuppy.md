@@ -4,5 +4,5 @@ description: This is a post about a horrible interview where the hiring manager 
 date: 2018-05-01
 tags:
   - interviews
-layout: layouts/post.njk
+
 ---

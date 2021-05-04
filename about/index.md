@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+
 title: About @cannandev
 templateClass: tmpl-post
 eleventyNavigation:

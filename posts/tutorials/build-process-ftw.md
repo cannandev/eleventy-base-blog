@@ -6,7 +6,6 @@ tags:
   - html
   - css
   - a11y
-layout: layouts/post.njk
 ---
 
 Question I've been asked by newer engineers is, how do you get started? Truth is every engineer has their own process. I prefer one that gets everyone on the team included AND gives high visibility to what I'm working on. I recently tried this on my website redesign, wearing hats of PM, devops, backend, frontend and tester.

@@ -4,5 +4,5 @@ description: This is a post about an interview that quickly went south when the 
 date: 2018-05-01
 tags:
   - interviews
-layout: layouts/post.njk
+
 ---

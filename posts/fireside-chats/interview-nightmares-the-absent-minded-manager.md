@@ -4,5 +4,6 @@ description: This is a post about a horrible interview where the hiring manager 
 date: 2018-05-01
 tags:
   - interviews
-layout: layouts/post.njk
+
 ---
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ut iste amet inventore voluptates? Ullam, odio placeat architecto accusantium aperiam nisi mollitia et recusandae commodi minima odit omnis. Ipsa, maiores.

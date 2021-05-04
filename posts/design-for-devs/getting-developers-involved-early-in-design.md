@@ -5,7 +5,6 @@ date: 2021-05-03
 tags:
   - design
   - balsamiq
-layout: layouts/post.njk
 ---
 
 ## Benefits
