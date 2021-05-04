@@ -5,7 +5,6 @@ date: 2021-05-03
 tags:
   - eleventy
   - nunjucks
-
 ---
 
 ## 1. Use postslist.njk as a starter
@@ -52,6 +51,8 @@ Something I desired in jekyll liquid templates.
 To make this global for all posts, I created `posts/posts.eleventyComputed.js`
 
 Turns out, using Javascript data files are faster than setting this data in front matter. So let's move this setting to `tutorials/tuorials.11tydata.js`
+
+## 4. Output article list per category
 
 #### References
 * [Javascript Data Files](https://www.11ty.dev/docs/data-js/#javascript-data-files)

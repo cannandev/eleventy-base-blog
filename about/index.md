@@ -1,6 +1,7 @@
 ---
 
 title: About @cannandev
+image:
 templateClass: tmpl-post
 eleventyNavigation:
   key: About
