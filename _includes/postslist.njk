@@ -1,6 +1,6 @@
 {% for post in postslist | reverse %}
   <article class="postlist-item">
-		<span>category label</span>
+		<span>{{ post.data.parent }}</span>
 		<h2><a href="{{ post.url | url }}" class="postlist-link">
       {% if post.data.title %}
         {{ post.data.title }}

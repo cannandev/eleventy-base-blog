@@ -1,9 +1,10 @@
 module.exports = {
   layout: "layouts/post.njk",
+  parent: "Case Studies",
   eleventyComputed: {
     eleventyNavigation: {
       key: data => data.title,
-      parent: data => "Case Studies"
+      parent: data => data.parent
     }
   }
 };
