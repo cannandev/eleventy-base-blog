@@ -79,3 +79,4 @@ DEBUG=* npx eleventy
 
 ### Inspiration
 [Mannequin theme](https://squaretypetheme.com/mannequin/)
+[Freepik Vector images](https://www.freepik.com/)
