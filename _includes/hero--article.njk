@@ -1,22 +1,28 @@
 <div class="hero">
 	<article class="article--featured">
-		<span>{{ post.data.parent }}</span>
-		<h1><a href="{{ post.url | url }}" class="postlist-link">
-      {% if post.data.title %}
-        {{ post.data.title }}
+	{%- for featuredPost in collections.posts %}
+		{% if featuredPost.data.featured %}
+		<span>{{ featuredPost.data.parent }}</span>
+		<h1><a href="{{ featuredPost.url | url }}" class="postlist-link">
+      {% if featuredPost.data.title %}
+        {{ featuredPost.data.title }}
       {% else %}
-        <code>{{ post.url }}</code>
+        <code>{{ featuredPost.url }}</code>
       {% endif %}
     </a></h1>
 		<ul>
-			<li><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></li>
+			<li><time class="postlist-date" datetime="{{ featuredPost.date | htmlDateString }}">{{ featuredPost.date | readableDate }}</time></li>
 			<li>111 Shares</li>
-			<li>{{ 'text' | timeToRead }} min read</li>
+			<li>{{ featuredPost.templateContent | timeToRead }} read</li>
 		</ul>
-		<p>{{post.data.description}}</p>
-		<a href="/">Read more button</a>
-		<div class="article__img">
-			<img src="/img/pen-tool-amico.png" alt="Black female designer with a giant pen and compass.">
-		</div>
+		<p>{{featuredPost.data.description}}</p>
+		<a href="{{ featuredPost.url | url }}">Read more</a>
+			{% if featuredPost.data.image %}
+			<div class="article__img">
+				<img src="/img/{{ featuredPost.data.image.file | urlencode }}" alt="{{ featuredPost.data.image.alttext }}">
+			</div>
+			{% endif %}
+		{% endif %}
+	{%- endfor -%}
 	</article>
 </div>

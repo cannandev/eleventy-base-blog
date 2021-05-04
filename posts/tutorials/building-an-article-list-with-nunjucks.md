@@ -57,6 +57,10 @@ Now that we've set the parent of each post, we can print the values in our templ
 <span>{{ post.data.parent }}</span>
 ```
 
+## 5. Getting read times
+Eleventy makes this so easy. Check out my post on how to do this the easy way and the hard way.
+
+
 #### References
 * [Javascript Data Files](https://www.11ty.dev/docs/data-js/#javascript-data-files)
 * [Data Cascade](https://www.11ty.dev/docs/data-cascade/)

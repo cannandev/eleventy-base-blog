@@ -1,10 +1,12 @@
 ---
 layout: layouts/base.njk
 templateClass: tmpl-post
+timeToRead: {{ content | timeToRead }}
 ---
 <h1>{{ title }}</h1>
 
 <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+<span>{{ content | timeToRead }} read</span>
 {%- for tag in tags | filterTagList -%}
 {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
 <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>

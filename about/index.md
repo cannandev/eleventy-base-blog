@@ -1,11 +1,13 @@
 ---
 
 title: About @cannandev
-image:
 templateClass: tmpl-post
 eleventyNavigation:
   key: About
   order: 3
+image:
+  file: cartoon-professional-claire.png
+  alttext: Claire as a professional cartoon. Made by befunky.
 ---
 
 Are you a hiring manager or recruiter looking for a UX researcher or experience designer? Look no more. Keep reading to get answers to your common questions.
