@@ -7,8 +7,4 @@ tags:
   - netlify cms
   - i18n
 layout: layouts/post.njk
-eleventyNavigation:
-  key: Setting up a multi-language site with Netlify CMS
-  order: 1
-  parent: Tutorials
 ---

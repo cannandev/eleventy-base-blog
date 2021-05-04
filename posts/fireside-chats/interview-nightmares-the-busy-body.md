@@ -5,8 +5,4 @@ date: 2018-05-02
 tags:
   - interviews
 layout: layouts/post.njk
-eleventyNavigation:
-  key: Interview nightmares - The Busy Body
-  order: 4
-  parent: Fireside Chat
 ---

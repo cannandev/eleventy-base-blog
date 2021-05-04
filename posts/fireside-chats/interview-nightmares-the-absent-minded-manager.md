@@ -5,8 +5,4 @@ date: 2018-05-01
 tags:
   - interviews
 layout: layouts/post.njk
-eleventyNavigation:
-  key: Interview nightmares - The Presumptuous Yuppy
-  order: 4
-  parent: Fireside Chat
 ---

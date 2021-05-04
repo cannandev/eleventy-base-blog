@@ -6,10 +6,6 @@ tags:
   - drupal
   - architecture
 layout: layouts/post.njk
-eleventyNavigation:
-  title: Creating a Safer User Interface for Allconnect.com Redesign
-  order: 1
-  parent: Case Studies
 ---
 Allconnect is a free resource that simplifies how you shop for home services. Learn how the UX team redesigned this website and innovated a new platform to make content updates easy and safe!
 

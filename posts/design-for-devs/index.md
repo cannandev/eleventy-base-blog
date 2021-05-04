@@ -1,8 +1,5 @@
 ---
 title: Design for Devs
+parent: Articles
 layout: layouts/list.njk
-eleventyNavigation:
-  key: Design for Devs
-  order: 2
-  parent: Articles
 ---
