@@ -6,6 +6,7 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const timeToRead = require("eleventy-plugin-time-to-read");
+const htmlmin = require('html-minifier');
 
 
 module.exports = function(eleventyConfig) {
@@ -61,6 +62,29 @@ module.exports = function(eleventyConfig) {
     });
 
     return [...tagSet];
+  });
+
+  // Setup for Tailwind CSS structure
+  eleventyConfig.addWatchTarget('./_tmp/style.css')
+  eleventyConfig.addPassthroughCopy({ './_tmp/style.css': './style.css' })
+  eleventyConfig.addShortcode("version", function () {
+    return String(Date.now());
+  });
+
+  eleventyConfig.addFilter('htmlmin', function (content, outputPath) {
+    if (
+      process.env.ELEVENTY_PRODUCTION &&
+      outputPath &&
+      outputPath.endsWith('.html')
+    ) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+      });
+      return minified
+    }
+    return content
   });
 
   // Copy the `img` and `css` folders to the output
