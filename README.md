@@ -80,3 +80,8 @@ DEBUG=* npx eleventy
 ### Inspiration
 [Mannequin theme](https://squaretypetheme.com/mannequin/)
 [Freepik Vector images](https://www.freepik.com/)
+
+### References
+[Tailwind CSS & Eleventy](https://css-tricks.com/eleventy-starter-with-tailwind-css-alpine-js/)
+[PostCSS]
+[html-minifier]
