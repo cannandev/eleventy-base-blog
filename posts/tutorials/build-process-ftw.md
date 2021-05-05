@@ -46,11 +46,13 @@ Once the basic component layouts are complete, it's time for interactions. Here'
 You've notice I've mentioned several tests throughout this process. These shouldn't be left for last.
 * Developer setup
 * CI/CD Pipeline
+* Asset bundler/minifier (js, css, images)
 * Accessibility Automated Checks
-* Accessibility Manual Checks
+* Accessibility Manual Checks - accessibility insights - team exercise.
 * Responsive design across devices
 * Cross browser testing
 * Version testing
+* Choice of testing -> E2E, unit, snapshots
 
 
 ## Reiterate and Refine
