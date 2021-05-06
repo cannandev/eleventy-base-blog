@@ -83,5 +83,4 @@ DEBUG=* npx eleventy
 
 ### References
 [Tailwind CSS & Eleventy](https://css-tricks.com/eleventy-starter-with-tailwind-css-alpine-js/)
-[PostCSS]
-[html-minifier]
+
