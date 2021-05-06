@@ -83,4 +83,5 @@ DEBUG=* npx eleventy
 
 ### References
 [Tailwind CSS & Eleventy](https://css-tricks.com/eleventy-starter-with-tailwind-css-alpine-js/)
-
+[Intelligent Tailwind CSS tooling for VS Code](https://github.com/tailwindlabs/tailwindcss-intellisense)
+[Tailwind Extracting Components](https://tailwindcss.com/docs/extracting-components)
