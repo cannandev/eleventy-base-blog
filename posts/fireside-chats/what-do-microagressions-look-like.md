@@ -1,4 +1,3 @@
-
 ---
 title: What do microagressions look like in the workplace?
 description: It is not in your head. Microagressions and unconcious bias indeed exist in the workplace. Here's how you know.
