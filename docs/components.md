@@ -5,7 +5,7 @@
 | ------------- | ------------- |
 | Logo | Image, size, color |
 | Tag | Label, link |
-| More Link | Label, link, size |
+| More Link | Label, link, size, states |
 | Blockquote | Quote, citation |
 | Article | Category, title (h1 link, h2 link) , date, shares, read time, tags, description, read-more-link |
 | Form | Labels, Fields, button |
