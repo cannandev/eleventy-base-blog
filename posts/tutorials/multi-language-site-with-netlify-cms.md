@@ -10,7 +10,7 @@ tags:
 featured: true
 image:
   file: Wavy_Edu-02_Single-12.jpg
-  alttext: Translating foreign languages as teacher points to world map.
+  atty: Translating foreign languages as teacher points to world map.
 ---
 Login.gov project.
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ab consectetur inventore, rem officiis sunt voluptatem nulla consequatur sint perferendis nisi provident qui eum eligendi quibusdam. Beatae fugiat debitis quia. Login.gov project.

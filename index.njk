@@ -4,7 +4,7 @@ eleventyNavigation:
   key: Home
   order: 1
 ---
-{% include "hero--article.njk" %}
+{% include "hero--featured.njk" %}
 <section>
 {% set postslist = collections.posts | head(-6) %}
 {% include "postslist.njk" %}
