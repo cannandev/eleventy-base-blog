@@ -1,0 +1,28 @@
+<div class="hero">
+	<article class="article--featured">
+	{%- for featuredPost in collections.posts %}
+		{% if featuredPost.data.featured %}
+		<span>{{ featuredPost.data.parent }}</span>
+		<h1><a href="{{ featuredPost.url | url }}" class="postlist-link">
+      {% if featuredPost.data.title %}
+        {{ featuredPost.data.title }}
+      {% else %}
+        <code>{{ featuredPost.url }}</code>
+      {% endif %}
+    </a></h1>
+		<ul>
+			<li><time class="postlist-date" datetime="{{ featuredPost.date | htmlDateString }}">{{ featuredPost.date | readableDate }}</time></li>
+			<li>111 Shares</li>
+			<li>{{ featuredPost.templateContent | timeToRead }} read</li>
+		</ul>
+		<p>{{featuredPost.data.description}}</p>
+		<a href="{{ featuredPost.url | url }}">Read more</a>
+			{% if featuredPost.data.image %}
+			<div class="article__img">
+				<img src="/img/{{ featuredPost.data.image.file | urlencode }}" alt="{{ featuredPost.data.image.alttext }}">
+			</div>
+			{% endif %}
+		{% endif %}
+	{%- endfor -%}
+	</article>
+</div>
