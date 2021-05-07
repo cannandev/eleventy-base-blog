@@ -2,6 +2,7 @@
 title: Cannandev Rebrand and what is means to me.
 description: At a time of social change, champions are needed right now. Here's why to decided to rebrand as one.
 date: 2018-05-01
+draft: true
 tags:
   - nunjucks
   - eleventy

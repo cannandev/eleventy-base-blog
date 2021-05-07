@@ -2,6 +2,7 @@
 title: Designing with components
 description: This is a post about designers making their Sketch designs easier for developers.
 date: 2018-05-01
+draft: true
 tags:
   - design
   - sketch

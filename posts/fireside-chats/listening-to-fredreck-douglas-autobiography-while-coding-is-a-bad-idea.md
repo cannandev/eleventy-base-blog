@@ -2,6 +2,7 @@
 title: Listening to the autobiography of Fredreck Douglas while coding is a very bad idea.
 description: What would an abolotionist think of a black female software engineer improving the technology of the US Government?
 date: 2020-05-02
+draft: true
 tags:
   - reviews
 ---

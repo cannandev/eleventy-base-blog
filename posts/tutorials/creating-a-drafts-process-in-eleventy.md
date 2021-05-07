@@ -1,7 +1,7 @@
 ---
-title: A Build Process FTW!
-description: After many, many trials and failures, this method has worked for me.
-date: 2021-05-01
+title: Creating a draft process in eleventy.
+description: A nifty feature of Jekyll is the _drafts collection. Eleventy, let's us control our own draft process using Javascript!
+date: 2021-05-07
 draft: true
 tags:
   - html
