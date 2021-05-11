@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Github CI
+name: Hello World
 
 # Controls when the action will run. 
 on:
@@ -35,7 +35,4 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-      # Runs image minifier
-      - name: Tinify Image Action
-        uses: namoscato/action-tinify@v1.3.1
           
