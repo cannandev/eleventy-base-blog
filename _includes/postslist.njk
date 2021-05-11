@@ -6,7 +6,7 @@
 	<div class="article__container flex flex-col space-y-6 px-4 pt-16 pb-0 justify-around items-start text-black md:w-7/12">
 		<span
 			class="article__category-tuts text-white px-2 py-1 text-xs bg-red-800 uppercase tracking-widest">{{ post.data.parent }}</span>
-		<h2 class="article__title font-serif text-4xl"><a href="{{ post.url | url }}"
+		<h2 class="article__title font-serif text-3xl md:text-4xl"><a href="{{ post.url | url }}"
 				class="">
 				{% if post.data.title %}
 				{{ post.data.title }}
