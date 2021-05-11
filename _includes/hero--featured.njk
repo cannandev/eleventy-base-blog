@@ -1,11 +1,13 @@
-<article id="hero--featured"
-	class="bg-black flex flex-col justify-between lg:flex-row lg:items-start lg:space-x-10 lg:py-0">
-	{%- for featuredPost in collections.posts %}
+<div class="md:relative bg-black overflow-hidden">
+	<article id="hero--featured"
+		class="max-w-7xl mx-auto bg-black flex flex-col justify-between md:flex-row md:items-center md:py-0">
+		{%- for featuredPost in collections.posts %}
 		{% if featuredPost.data.featured %}
-		<div class="article__container flex flex-col space-y-6 px-4 py-16 justify-around items-start text-white">
+		<div class="article__container flex flex-col space-y-6 px-4 py-16 justify-around items-start text-white md:w-7/12">
 			<span
 				class="article__category-tuts text-white px-2 py-1 text-xs bg-red-800 uppercase tracking-widest">{{ featuredPost.data.parent }}</span>
-			<h1 class="article__title font-serif text-4xl"><a href="{{ featuredPost.url | url }}" class="">
+			<h1 class="article__title font-serif text-4xl md:text-5xl md:pt-8"><a href="{{ featuredPost.url | url }}"
+					class="">
 					{% if featuredPost.data.title %}
 					{{ featuredPost.data.title }}
 					{% else %}
@@ -21,7 +23,8 @@
 					<time class="postlist-date"
 						datetime="{{ featuredPost.date | htmlDateString }}">{{ featuredPost.date | postDate }}</time>
 				</li>
-				<li><svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 inline mr-1 align-text-bottom" viewBox="0 0 20 20" fill="currentColor">
+				<li><svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 inline mr-1 align-text-bottom" viewBox="0 0 20 20"
+						fill="currentColor">
 						<path
 							d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
 					</svg>
@@ -35,15 +38,17 @@
 					<span>{{ featuredPost.templateContent | timeToRead }} read</span>
 				</li>
 			</ul>
-			<p class="article__description text-lg lg:text-xl">{{featuredPost.data.description}}</p>
-			<a class="btn uppercase border border-white px-8 py-3 text-xs tracking-widest" href="{{ featuredPost.url | url }}">Read more</a>
+			<p class="article__description text-lg md:text-xl md:pb-8">{{featuredPost.data.description}}</p>
+			<a class="btn uppercase border border-white px-8 py-3 text-xs tracking-widest"
+				href="{{ featuredPost.url | url }}">Read more</a>
 		</div>
-			{% if featuredPost.data.image %}
-			<div class="border-b border-black">
-				<img class="hero__img h-auto" src="/img/{{ featuredPost.data.image.file | urlencode }}"
-					alt="{{ featuredPost.data.image.alttext }}"/>
-			</div>
-			{% endif %}
+		{% if featuredPost.data.image %}
+		<div class="border-t border-b border-gray-200 md:absolute md:bg-white md:inset-y-0 md:right-0 md:w-5/12">
+			<img class="hero__img h-auto w-full object-cover md:h-96 lg:w-full lg:h-full"
+				src="/img/{{ featuredPost.data.image.file | urlencode }}" alt="{{ featuredPost.data.image.alttext }}" />
+		</div>
 		{% endif %}
-	{%- endfor -%}
-</article>
+		{% endif %}
+		{%- endfor -%}
+	</article>
+</div>
