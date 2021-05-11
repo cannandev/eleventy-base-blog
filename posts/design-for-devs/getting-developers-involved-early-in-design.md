@@ -2,6 +2,7 @@
 title: How to get your developers involved early in the design process.
 description: Use wireframes and lo-fi prototypes to get developers involved in the software development lifecycle.
 date: 2021-05-03
+draft: true
 tags:
   - design
   - balsamiq

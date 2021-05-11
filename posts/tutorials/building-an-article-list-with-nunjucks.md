@@ -2,6 +2,7 @@
 title: Building an article list with nunjucks
 description: This is how I built the reusable list of posts on my blog.
 date: 2021-05-03
+draft: true
 tags:
   - eleventy
   - nunjucks

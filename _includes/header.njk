@@ -1,19 +1,51 @@
-<h1 class="page-title">
-  <a href="{{ '/' | url }}">
-    <img src="/img/logo-black.png" alt="{{ metadata.title }}">
-	</a>
-  </h1>
-  <ul class="nav">
-    {%- for entry in collections.all | eleventyNavigation %}
-      <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}">
-        <a href="{{ entry.url | url }}">{{ entry.title }}</a>
-				{% if entry.title == "Articles" %}
-				<ul class="nav-item__children">
-					{%- for article in collections.all | eleventyNavigation("Articles") %}
-					<li><a href="{{ article.url | url }}">{{ article.title }}</a></li>
-					{%- endfor %}
-				</ul>
-				{% endif %}
-      </li>
-    {%- endfor %}
-  </ul>
+<div class="max-w-7xl mx-auto px-4 sm:px-6">
+  <div class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
+    <div class="flex justify-start md:w-0 md:flex-1">
+      <a href="{{ '/' | url }}">
+        <span class="sr-only">{{ metadata.title }}</span>
+        <img class="h-8 w-auto sm:h-10" src="/img/logo-black.png" alt="Site logo for cannandev.com">
+      </a>
+    </div>
+    <div class="-mr-2 -my-2 md:hidden">
+      <button type="button"
+        class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+        aria-expanded="false">
+        <span class="sr-only">Open menu</span>
+        <!-- Heroicon name: outline/menu -->
+        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+          aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <nav class="hidden md:flex items-end space-x-10">
+      {%- for entry in collections.all | eleventyNavigation %}
+      {% if entry.title == "Articles" %}
+      <div class="relative">
+        <button type="button"
+          class="text-gray-900 group bg-white rounded-md inline-flex items-center text-sm font-medium uppercase hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          aria-expanded="false">
+          <span>{{ entry.title }}</span>
+
+          <svg class="text-gray-500 ml-2 h-5 w-5 group-hover:text-gray-400" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clip-rule="evenodd" />
+          </svg>
+        </button>
+        <ul class="hidden absolute w-52 py-8 px-3 -ml-3 space-y-5 bg-gray-50">
+          {%- for article in collections.all | eleventyNavigation("Articles") %}
+          <li class=""><a href="{{ article.url | url }}">{{ article.title }}</a></li>
+          {%- endfor %}
+        </ul>
+      </div>
+      {% else %}
+      <a href="{{ entry.url | url }}" class="text-sm font-medium uppercase text-gray-900 hover:text-gray-500">
+        {{ entry.title }}
+      </a>
+      {% endif %}
+      {%- endfor %}
+    </nav>
+  </div>
+</div>

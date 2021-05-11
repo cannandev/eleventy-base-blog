@@ -4,15 +4,14 @@ eleventyNavigation:
   key: Home
   order: 1
 ---
-{% include "hero--article.njk" %}
+{% include "hero--featured.njk" %}
 <section>
 {% set postslist = collections.posts | head(-6) %}
 {% include "postslist.njk" %}
-  <a href="{{ '/posts/' | url }}" alt="Archive of blog articles">Browse all articles</a>
+{% include "btn--load-more.njk" %}
 </section>
 <aside>
   {% include "widget--about.njk" %}
   {% include "widget--articles.njk" %}
   {% include "widget--tags.njk" %}
 </aside>
-{% include "widget--tailwind.njk" %}

@@ -2,6 +2,7 @@
 title: Simplest Time to Read plugin ever!
 description: Ever wonder how to calculate the number of minutes it would take to read an article?
 date: 2021-05-04
+draft: true
 tags:
   - eleventy
   - javascript

@@ -1,7 +1,6 @@
 ---
 layout: layouts/base.njk
 templateClass: tmpl-post
-timeToRead: {{ content | timeToRead }}
 ---
 {% set navPages = collections.all | eleventyNavigationBreadcrumb( title ) %}
 <nav>{% for breadcrumb in navPages %}<a href="{{ breadcrumb.url }}">{{ breadcrumb.key }}</a>&nbsp;{% endfor %}</nav>

@@ -2,6 +2,7 @@
 title: Creating a Safer User Interface for Allconnect.com Redesign
 description: Learn how the UX team redesigned this website and innovated a new platform to make content updates easy and safe.
 date: 2018-05-01
+draft: true
 tags:
   - drupal
   - architecture
