@@ -39,8 +39,7 @@
 				</li>
 			</ul>
 			<p class="article__description text-lg md:text-xl md:pb-8">{{featuredPost.data.description}}</p>
-			<a class="btn uppercase border border-white px-8 py-3 text-xs tracking-widest"
-				href="{{ featuredPost.url | url }}">Read more</a>
+			<a class="btn" href="{{ featuredPost.url | url }}">Read more</a>
 		</div>
 		{% if featuredPost.data.image %}
 		<div class="border-t border-b border-gray-200 md:absolute md:bg-white md:inset-y-0 md:right-0 md:w-5/12">

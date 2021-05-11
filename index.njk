@@ -8,7 +8,7 @@ eleventyNavigation:
 <section>
 {% set postslist = collections.posts | head(-6) %}
 {% include "postslist.njk" %}
-  <a href="{{ '/posts/' | url }}" alt="Archive of blog articles">Browse all articles</a>
+{% include "btn--load-more.njk" %}
 </section>
 <aside>
   {% include "widget--about.njk" %}
