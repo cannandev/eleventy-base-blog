@@ -4,7 +4,7 @@ description: After many, many trials and failures, this method has worked for me
 date: 2021-05-10
 draft: true
 tags:
-  - process
+  - workflow
   - css
 ---
 
@@ -17,11 +17,13 @@ So to be truly successful as an agile engineer on a SDLC, ask yourself, if we ha
 
 * Foreground Colors
 * Background colors
+* Interactive states (active, hover, visited)
 * Gradients
 * images
 * videos
 * border radius
 * animations
+* mobile interactions (swipe, tap). Although we try to build mobile firs, these mobile-only interactions should never replace normal interaction. Always provide instructions and defaults. (progressive enhancement)
 
 So leave these for last. And remember that none of these features should detract from the accessibility of your product. An inclusive product is a great product.
 

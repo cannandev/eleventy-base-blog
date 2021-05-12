@@ -20,10 +20,11 @@
       <header>
         {% include "header.njk" %}
       </header>
-      <main id="main-content" {% if templateClass %} class="{{ templateClass }}" {% endif %}>
+      {% include "hero--featured.njk" %}
+      <main id="main-content" class="{% if templateClass %}{{ templateClass }}{% endif %} max-w-7xl mx-auto md:grid md:grid-cols-3 md:gap-9" >
         {{ content | safe }}
       </main>
-      <footer>
+      <footer class="bg-black text-white">
         {% include "footer.njk" %}
       </footer>
     </div>

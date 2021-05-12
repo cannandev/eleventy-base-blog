@@ -79,7 +79,7 @@ Goal is MVP (minimal viable product), as a team, should have decided what that s
 
 ## Build - Interactions
 
-Once the basic layouts are broken out into reusable and responsive components, it's time for interactions. Here's where you implement your WII research. What happens if I enter text into this field? What if an unauthorized user lands on this page? What happens when a user clicks this button? Even if you're showing dummy data as results, the MVP still shows the workflow (and any necessary tweaks it needs). Links to other pages, navigation, buttons, accordions, modals. Not completely styled, but structure is in place. Javascript (or other). Errors.
+Once the basic layouts are broken out into reusable and responsive components, it's time for interactions. Here's where you implement your WII research. What happens if I enter text into this field? What if an unauthorized user lands on this page? What happens when a user clicks this button? Even if you're showing dummy data as results, the MVP still shows the workflow (and any necessary tweaks it needs). Links to other pages, navigation, buttons, accordions, modals. Not completely styled, but function and structure are in place. Javascript (or other). Errors. * Interactive elements include links, buttons, icons, form fields fields.
 
 ## Test
 

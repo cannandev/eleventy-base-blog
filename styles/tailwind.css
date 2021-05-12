@@ -12,4 +12,7 @@
   .btn {
     @apply uppercase border border-white bg-black text-white px-8 py-3 text-xs tracking-widest;
   }
+  .widget__title {
+    @apply text-xs font-medium text-gray-900 uppercase underline py-6 leading-loose;
+  }
 }
