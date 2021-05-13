@@ -1,5 +1,5 @@
   <div class="widget--articles">
     <h4 class="widget__title">Most Popular Articles</h4>
     {% set postslist = collections.posts | head(-3) %}
-    {% include "postslistOrdered.njk" %}
+    {% include "postslistPopular.njk" %}
   </div>
