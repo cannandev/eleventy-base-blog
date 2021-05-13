@@ -21,7 +21,7 @@
         {% include "header.njk" %}
       </header>
       {% include "hero--featured.njk" %}
-      <main id="main-content" class="{% if templateClass %}{{ templateClass }}{% endif %} max-w-7xl mx-auto md:grid md:grid-cols-3 md:gap-9" >
+      <main id="main-content" class="{% if templateClass %}{{ templateClass }}{% endif %} max-w-7xl mx-auto lg:grid lg:grid-cols-3 lg:gap-8 xl:gap-24" >
         {{ content | safe }}
       </main>
       <footer class="bg-black text-white">
