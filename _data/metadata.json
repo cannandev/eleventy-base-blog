@@ -17,5 +17,9 @@
     "name": "Claire Annan",
     "email": "me@cannandev.com",
     "url": "https://cannandev.com/about/"
+  },
+  "sharethiscount": {
+    "server": "http://count-server.sharethis.com/v2.0/get_counts?url=",
+    "url": "https://www.sharethis.com"
   }
 }
