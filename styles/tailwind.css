@@ -15,4 +15,7 @@
   .widget__title {
     @apply text-xs font-medium text-gray-900 uppercase underline py-6 leading-loose;
   }
+  .post-tag {
+    @apply border border-gray-400 leading-8 mr-2 p-1 rounded-sm uppercase text-xs;
+  }
 }
