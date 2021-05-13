@@ -1,7 +1,7 @@
 module.exports = {
   purge: [
     './src/**/*.html',
-    '_site/**/*.html',
+    './_site/**/*.html',
   ],
   theme: {
     extend: {
@@ -13,7 +13,14 @@ module.exports = {
   variants: {
     extend: {
       textDecoration: ['active'],
+      textColor: ['before', 'after'],
+      fontSize: ['before', 'after'],
     }
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-pseudo-elements')({
+      contentUtilities: true,
+      emptyContent: true,
+    }),
+  ],
 }

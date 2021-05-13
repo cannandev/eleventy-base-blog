@@ -36,7 +36,8 @@
     "markdown-it": "^12.0.4",
     "markdown-it-anchor": "^7.1.0",
     "postcss-cli": "^8.3.1",
-    "tailwindcss": "^2.1.2"
+    "tailwindcss": "^2.1.2",
+    "tailwindcss-pseudo-elements": "^2.0.0"
   },
   "dependencies": {}
 }
