@@ -1,0 +1,13 @@
+<ol reversed class="space-y-4" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
+  {% for post in postslist %}
+    <li class="flex flex-row items-top content-before before:text-black before:text-2xl" tw-content-before="#{{loop.index}}">
+      <a href="{{ post.url | url }}" class="text-lg font-semibold font-serif mx-4">
+        {% if post.data.title %}
+          {{ post.data.title }}
+        {% else %}
+          <code>{{ post.url }}</code>
+        {% endif %}
+      </a>
+    </li>
+  {% endfor %}
+</ol>

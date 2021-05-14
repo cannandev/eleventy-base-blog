@@ -5,13 +5,15 @@ eleventyNavigation:
   order: 1
 ---
 
-<section class="md:col-span-2">
+<section class="lg:col-span-2">
   {% set postslist = collections.posts | head(-6) %}
   {% include "postslist.njk" %}
   {% include "btn--load-more.njk" %}
 </section>
-<aside class="md:col-span-1">
+<div class="px-4 pt-16 lg:col-span-1 lg:px-4">
+  <div class="lg:sticky lg:top-0">
   {% include "widget--about.njk" %}
   {% include "widget--articles.njk" %}
   {% include "widget--tags.njk" %}
-</aside>
+  </div>
+</div>

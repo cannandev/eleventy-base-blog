@@ -1,10 +1,8 @@
 module.exports = {
-  purge: {
-    content: ['_site/**/*.html'],
-    options: {
-      safelist: [],
-    },
-  },
+  purge: [
+    './src/**/*.html',
+    './_site/**/*.html',
+  ],
   theme: {
     extend: {
       colors: {
@@ -12,6 +10,17 @@ module.exports = {
       },
     },
   },
-  variants: {},
-  plugins: [],
+  variants: {
+    extend: {
+      textDecoration: ['active'],
+      textColor: ['before', 'after'],
+      fontSize: ['before', 'after'],
+    }
+  },
+  plugins: [
+    require('tailwindcss-pseudo-elements')({
+      contentUtilities: true,
+      emptyContent: true,
+    }),
+  ],
 }
