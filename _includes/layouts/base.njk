@@ -15,19 +15,13 @@
   </head>
 
   <body>
-    <div class="relative bg-white">
-      <a href="#main-content" alt="Skip link" class="sr-only focus:not-sr-only">Skip to main content</a>
-      <header>
-        {% include "header.njk" %}
-      </header>
-      {% include "hero--featured.njk" %}
-      <main id="main-content" class="{% if templateClass %}{{ templateClass }}{% endif %} max-w-7xl mx-auto lg:grid lg:grid-cols-3 lg:gap-8 xl:gap-24" >
-        {{ content | safe }}
-      </main>
-      <footer class="bg-black text-white">
-        {% include "footer.njk" %}
-      </footer>
-    </div>
+    <header>
+      {% include "header.njk" %}
+    </header>
+    {{ content | safe }}
+    <footer class="bg-black text-white">
+      {% include "footer.njk" %}
+    </footer>
   </body>
 
 </html>

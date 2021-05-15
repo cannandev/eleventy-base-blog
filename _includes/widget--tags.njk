@@ -1,7 +1,7 @@
-  <div class="widget--tags">
-    <h4 class="widget__title">Tags</h4>
-    {% for tag in collections.tagList | filterTagList %}
-      {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-      <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-    {% endfor %}
-  </div>
+<aside class="widget--tags" aria-labelledby="complementary-tag">
+  <h4 id="complementary-tag" class="widget__title">Tags</h4>
+  {% for tag in collections.tagList | filterTagList %}
+  {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+  <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+  {% endfor %}
+</aside>
