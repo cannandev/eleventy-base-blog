@@ -1,13 +1,14 @@
-<div class="md:relative bg-black overflow-hidden">
+<section class="md:relative bg-black overflow-hidden" aria-label="Featured article">
 	<article id="hero--featured"
-		class="max-w-7xl mx-auto bg-black flex flex-col justify-between md:flex-row md:items-center md:py-0">
+		class="max-w-7xl mx-auto bg-black flex flex-col justify-between md:flex-row md:items-center md:py-0"
+		aria-labelledby="article-title">
 		{%- for featuredPost in collections.posts %}
 		{% if featuredPost.data.featured %}
 		<div class="article__container flex flex-col space-y-6 px-4 py-16 justify-around items-start text-white md:w-7/12">
 			<span
 				class="article__category-tuts text-white px-2 py-1 text-xs bg-red-800 uppercase tracking-widest">{{ featuredPost.data.parent }}</span>
-			<h1 class="article__title font-serif text-4xl md:text-5xl md:pt-8"><a href="{{ featuredPost.url | url }}"
-					class="">
+			<h1 class="article__title font-serif text-4xl md:text-5xl md:pt-8"><a id="article-title"
+					href="{{ featuredPost.url | url }}" class="">
 					{% if featuredPost.data.title %}
 					{{ featuredPost.data.title }}
 					{% else %}
@@ -50,4 +51,4 @@
 		{% endif %}
 		{%- endfor -%}
 	</article>
-</div>
+</section>
