@@ -1,7 +1,15 @@
-<div class="hero">
-	<div>
-		<h1>Design for Devs</h1>
-		<p>Provident temporibus adipisci ipsam non praesentium ea, mollitia reiciendis repellat labore, consequatur blanditiis nesciunt, libero voluptas odio...</p>
-		<img src="/img/diverse-women.jpg" alt="Group of diverse women.">
-	</div>
-</div>
+<section class="md:relative bg-black overflow-hidden" aria-label="Collection of articles by category">
+	<article id="hero--category"
+		class="max-w-7xl mx-auto bg-black flex flex-col justify-between md:flex-row md:items-center md:py-0"
+		aria-labelledby="category-title">
+		<div class="category__container flex flex-col px-4 py-16 justify-center items-start text-white md:w-7/12 md:h-96">
+			<h1 class="category__title font-serif text-4xl md:text-7xl md:py-10">{{ title }}</h1>
+		</div>
+		{% if image %}
+		<div class="border-t border-b border-gray-200 md:absolute md:bg-white md:inset-y-0 md:right-0 md:w-5/12">
+			<img class="hero__img h-auto w-full object-cover md:h-96 lg:w-full lg:h-full"
+				src="/img/{{ image.src | urlencode }}" alt="{{ image.alt }}" />
+		</div>
+		{% endif %}
+	</article>
+</section>
