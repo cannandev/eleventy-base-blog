@@ -2,4 +2,20 @@
 layout: layouts/base.njk
 templateClass: tmpl-home
 ---
+{% include "hero--featured.njk" %}
+
+<div
+  class="{% if templateClass %}{{ templateClass }}{% endif %} max-w-7xl mx-auto lg:grid lg:grid-cols-3 lg:gap-8 xl:gap-24">
+  <main id="main-content" class="lg:col-span-2" aria-label="Most recent articles">
+    {% set postslist = collections.posts | head(-6) %}
+    {% include "postslist.njk" %}
+    {% include "btn--load-more.njk" %}
+  </main>
+  <div class="px-4 pt-16 lg:col-span-1 lg:px-4">
+    {% include "widget--about.njk" %}
+    {% include "widget--articles.njk" %}
+    {% include "widget--tags.njk" %}
+  </div>
+</div>
+
 {{ content | safe }}

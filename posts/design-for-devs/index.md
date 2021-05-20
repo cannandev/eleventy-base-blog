@@ -1,6 +1,10 @@
 ---
+layout: layouts/category.njk
+templateClass: tmpl-category
 title: Design for Devs
-image: pen-tool-amico.svg
+image:
+  src: pen-tool-amico.svg
+  alt: lorem ipsum credit
 ---
 Long gone are the days, when designers lock themselves in their cubicle to "become inspired", miraculously transform their ideas into a photoshop psd file and throw it over the fence to a developer locked in a dark room expected to turn around a pixel-perfect web site in a couple of days. At least I hope that's not still happening.
 
