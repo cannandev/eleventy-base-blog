@@ -22,7 +22,7 @@
     <nav class="hidden md:flex items-end space-x-10">
       {%- for entry in collections.all | eleventyNavigation %}
       {% if entry.title == "Articles" %}
-      <div class="relative">
+      <div id="dropdown-toggle" class="relative">
         <button type="button"
           class="text-gray-900 group bg-white rounded-md inline-flex items-center text-sm font-medium uppercase hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           aria-expanded="false">
@@ -35,7 +35,7 @@
               clip-rule="evenodd" />
           </svg>
         </button>
-        <ul class="hidden absolute w-52 py-8 px-3 -ml-3 space-y-5 bg-gray-50" role="navigation"
+        <ul id="dropdown" class="hidden absolute w-52 py-8 px-3 -ml-3 space-y-5 bg-gray-50" role="navigation"
           arial-label="Article categories">
           {%- for article in collections.all | eleventyNavigation("Articles") %}
           <li class=""><a href="{{ article.url | url }}">{{ article.title }}</a></li>
