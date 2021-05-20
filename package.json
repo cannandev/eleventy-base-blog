@@ -3,7 +3,7 @@
   "version": "5.0.2",
   "description": "A blog web site using the Eleventy static site generator.",
   "scripts": {
-    "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production postcss styles/tailwind.css --o _site/style.css",
+    "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production postcss styles/tailwind.css --o _tmp/style.css && cleancss _site/style.css -o _tmp/style.css",
     "watch": "eleventy --watch",
     "serve": "eleventy --serve",
     "start": "eleventy --serve & postcss styles/tailwind.css --o _tmp/style.css --watch",
