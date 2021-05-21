@@ -22,6 +22,14 @@
     <footer class="bg-black text-white">
       {% include "footer.njk" %}
     </footer>
+    <!-- capture the JS content as a Nunjucks variable -->
+    {% set js %}
+      {% include "js/main.js" %}
+    {% endset %}
+    <!-- feed it through our jsmin filter to minify -->
+    <script>
+      {{ js | jsmin | safe }}
+    </script>
   </body>
 
 </html>
