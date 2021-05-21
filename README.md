@@ -91,3 +91,4 @@ DEBUG=* npx eleventy
 [Tailwind Extracting Components](https://tailwindcss.com/docs/extracting-components)
 [Civic Actions Pa11y-CI Github Action](https://accessibility.civicactions.com/posts/automated-accessibility-testing-leveraging-github-actions-and-pa11y-ci-with-axe)
 [Local pa11y integration](https://github.com/t12t/t12t.github.io/blob/main/package.json)
+[Minified Javascript with Terser](https://www.11ty.dev/docs/quicktips/inline-js/)
