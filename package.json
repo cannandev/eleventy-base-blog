@@ -39,6 +39,7 @@
     "markdown-it-anchor": "^7.1.0",
     "pa11y-ci": "^2.4.1",
     "postcss-cli": "^8.3.1",
+    "standard": "^16.0.3",
     "tailwindcss": "^2.1.2",
     "tailwindcss-pseudo-elements": "^2.0.0",
     "terser": "^5.7.0"
