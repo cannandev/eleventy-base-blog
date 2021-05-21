@@ -9,7 +9,7 @@
     </div>
     <div class="-mr-2 -my-2 md:hidden">
       <button type="button"
-        class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+        class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset"
         aria-expanded="false">
         <span class="sr-only">Open menu</span>
         <!-- Heroicon name: outline/menu -->
@@ -19,12 +19,12 @@
         </svg>
       </button>
     </div>
-    <nav class="hidden md:flex items-end space-x-10">
+    <nav class="hidden md:flex items-end space-x-10 z-10">
       {%- for entry in collections.all | eleventyNavigation %}
       {% if entry.title == "Articles" %}
-      <div id="dropdown-toggle" class="relative">
-        <button type="button"
-          class="text-gray-900 group bg-white rounded-md inline-flex items-center text-sm font-medium uppercase hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+      <div id="navDropdown" class="relative">
+        <button type="button" id="navDropdownToggle"
+          class="text-gray-900 group bg-white rounded-md inline-flex items-center text-sm font-medium uppercase hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2"
           aria-expanded="false">
           <span id="articles-dropdown">{{ entry.title }}</span>
 
@@ -35,7 +35,7 @@
               clip-rule="evenodd" />
           </svg>
         </button>
-        <ul id="dropdown" class="hidden absolute w-52 py-8 px-3 -ml-3 space-y-5 bg-gray-50" role="navigation"
+        <ul id="navDropdownLinks" class="hidden absolute w-52 py-8 px-3 -ml-3 space-y-5 bg-gray-50" role="navigation"
           arial-label="Article categories">
           {%- for article in collections.all | eleventyNavigation("Articles") %}
           <li class=""><a href="{{ article.url | url }}">{{ article.title }}</a></li>
