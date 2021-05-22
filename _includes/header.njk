@@ -19,6 +19,7 @@
         </svg>
       </button>
     </div>
+    <!-- Desktop navigation -->
     <nav class="hidden md:flex items-end space-x-10 z-10">
       {%- for entry in collections.all | eleventyNavigation %}
       {% if entry.title == "Articles" %}
@@ -27,7 +28,7 @@
           class="text-gray-900 group bg-white rounded-md inline-flex items-center text-sm font-medium uppercase hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2"
           aria-expanded="false">
           <span id="articles-dropdown">{{ entry.title }}</span>
-
+          <span class="sr-only">Open menu</span>
           <svg class="text-gray-500 ml-2 h-5 w-5 group-hover:text-gray-400" xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path fill-rule="evenodd"
@@ -49,5 +50,31 @@
       {% endif %}
       {%- endfor %}
     </nav>
+  </div>
+  <!-- Mobile menu, show/hide based on menu state. -->
+  <div class="md:hidden" id="mobile-menu">
+    <div class=" pt-2 pb-3 space-y-1">
+      {%- for entry in collections.all | eleventyNavigation %}
+        {% if entry.url == page.url %}
+        <a href="{{ entry.url | url }}" class="block px-3 py-2 text-base font-medium"
+          aria-current="page">
+          {{ entry.title }}
+        </a>
+        {% else %}
+        <a href="{{ entry.url | url }}" class="bg-gray-900 text-white block px-3 py-2 text-base font-medium">
+        {{ entry.title }}
+        </a>
+        {% endif %}
+        {% if entry.title == "Articles" %}
+        <div class="flex flex-col">
+          {%- for article in collections.all | eleventyNavigation("Articles") %}
+          <a href="{{ article.url | url }}" class="pl-6 py-2 text-base font-medium {% if article.url == page.url %}bg-gray-100{% endif %}">
+          {{ article.title }}
+          </a>
+          {%- endfor %}
+        </div>
+        {% endif %}
+      {%- endfor -%}
+    </div>
   </div>
 </div>
