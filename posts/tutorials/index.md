@@ -3,7 +3,7 @@ title: Tutorials
 layout: layouts/category.njk
 templateClass: tmpl-category
 image:
-  src: motherhood-illustration.jpg
+  src: instruction-manual-pana.svg
   alt: Motherhood vector created by pch.vector - www.freepik.com
 ---
 
