@@ -1,10 +1,10 @@
-/* Articles Dropdown Menu */
+// Desktop Menu - Articles Dropdown Menu
 const mainNavToggle = document.getElementById('navDropdownToggle')
 const mainNavLinks = mainNavToggle.nextElementSibling
 const mainNavCaret = mainNavToggle.querySelector('svg')
 let caretRotation = 0
 
-const isMainDropdownHidden = () => {
+const isMenuOpen = _ => {
   return mainNavLinks.classList.contains('hidden')
 }
 
@@ -29,6 +29,17 @@ const hideDropdown = e => {
 
 mainNavToggle.addEventListener('click', e => {
   mainNavLinks.classList.toggle('hidden')
+  isMenuOpen() ? showDropdown(e) : hideDropdown(e)
+})
 
-  isMainDropdownHidden() ? showDropdown(e) : hideDropdown(e)
+// Mobile Menu
+const mobileToggle = document.getElementById('mobileToggle')
+const mobileMenu = document.getElementById('mobile-menu')
+
+mobileToggle.addEventListener('click', e => {
+  const icons = mobileToggle.querySelectorAll('svg')
+  mobileMenu.classList.toggle('hidden')
+  icons.forEach(icon => {
+    icon.classList.contains('block') ? icon.classList.replace('block', 'hidden') : icon.classList.replace('hidden', 'block')
+  })
 })
