@@ -1,4 +1,4 @@
-name: image
+name: Tinify images
 on:
   pull_request:
     paths:
