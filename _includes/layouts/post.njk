@@ -2,29 +2,11 @@
 layout: layouts/base.njk
 templateClass: tmpl-post
 ---
-{% include "hero--category.njk" %}
+{% include "hero--post.njk" %}
 
-{% set navPages = collections.all | eleventyNavigationBreadcrumb( title ) %}
-<nav>{% for breadcrumb in navPages %}<a href="{{ breadcrumb.url }}">{{ breadcrumb.key }}</a>&nbsp;{% endfor %}</nav>
+<div class="max-w-4xl mx-auto px-4 pt-16 pb-0 text-lg md:text-xl md:py-16">
+  {{ content | safe }}
+  {% include "post__tags.njk" %}
+</div>
 
-<h1>{{ title }}</h1>
-
-<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
-<span>{{ content | timeToRead }} read</span>
-{%- for tag in tags | filterTagList -%}
-{%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
-<a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-{%- endfor %}
-
-{{ content | safe }}
-
-{%- set nextPost = collections.posts | getNextCollectionItem(page) %}
-{%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-{%- if nextPost or previousPost %}
-<hr>
-<ul>
-  {%- if nextPost %}<li>Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-  {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{%
-  endif %}
-</ul>
-{%- endif %}
+{% include "post__prevnext.njk" %}

@@ -7,7 +7,7 @@
 			<h1 class="category__title font-serif text-4xl md:text-7xl md:py-10">{{ title }}</h1>
 		</div>
 		{% if image %}
-		<div class="border-t border-b border-gray-200 md:absolute md:bg-white md:inset-y-0 md:right-0 md:w-5/12">
+		<div class="md:border-t border-b border-gray-200 md:absolute md:bg-white md:inset-y-0 md:right-0 md:w-5/12">
 			<img class="hero__img h-auto w-full object-cover md:h-96 lg:w-full lg:h-full"
 				src="/img/{{ image.src | urlencode }}" alt="{{ image.alt }}" />
 		</div>
