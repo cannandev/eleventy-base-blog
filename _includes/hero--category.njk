@@ -2,7 +2,8 @@
 	<article id="hero--category"
 		class="max-w-7xl mx-auto bg-black flex flex-col justify-between md:flex-row md:items-center md:py-0"
 		aria-labelledby="category-title">
-		<div class="category__container flex flex-col px-4 py-16 justify-center items-start text-white md:w-7/12 md:h-96">
+		<div
+			class="category__container flex flex-col px-4 py-16 justify-center items-start text-white md:w-7/12 {% if image %}md:h-96{% endif %}">
 			<h1 class="category__title font-serif text-4xl md:text-7xl md:py-10">{{ title }}</h1>
 		</div>
 		{% if image %}
