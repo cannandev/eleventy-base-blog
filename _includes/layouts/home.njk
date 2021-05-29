@@ -7,7 +7,7 @@ templateClass: tmpl-home
 <div
   class="{% if templateClass %}{{ templateClass }}{% endif %} max-w-7xl mx-auto lg:grid lg:grid-cols-3 lg:gap-8 xl:gap-24">
   <main id="main-content" class="lg:col-span-2" aria-label="Most recent articles">
-    {% set postslist = collections.posts | head(-6) %}
+    {% set postslist = collections.posts | head(-6) | reverse %}
     {% include "postslist.njk" %}
     {% include "btn--load-more.njk" %}
   </main>
