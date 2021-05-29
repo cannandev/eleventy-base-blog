@@ -1,26 +1,9 @@
 ---
-layout: layouts/base.njk
+layout: layouts/sidenav-col.njk
 templateClass: tmpl-category
 ---
-{% include "hero.njk" %}
 
-<div class="max-w-4xl mx-auto px-4 pt-16 pb-0 text-lg md:text-xl md:py-16">{{ content | safe }}</div>
+<div class="py-10">{{ content | safe }}</div>
 
-<div
-  class="{% if templateClass %}{{ templateClass }}{% endif %} max-w-7xl mx-auto lg:grid lg:grid-cols-3 lg:gap-8 xl:gap-24">
-  <main id="main-content" class="lg:col-span-2 p-4" aria-label="All articles about {{ title }}">
-    <h2 class="widget__title">Articles</h2>
-    {% set navPages = collections.all | eleventyNavigation( title ) | reverse %}
-    <ul>
-      {%- for entry in navPages %}
-      <li class="article__title font-serif text-2xl py-4 md:text-4xl">
-        <a class="underline" href="{{ entry.url | url }}">{{ entry.title }}</a>
-      </li>
-      {%- endfor %}
-    </ul>
-  </main>
-  <div class="px-4 pt-16 lg:col-span-1 lg:px-4">
-    {% include "widget--about.njk" %}
-    {% include "widget--tags.njk" %}
-  </div>
-</div>
+{% set navPages = collections.all | eleventyNavigation( title ) | reverse %}
+{% include "list.njk" %}

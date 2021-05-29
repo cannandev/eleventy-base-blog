@@ -1,0 +1,7 @@
+<ul>
+  {%- for entry in navPages %}
+  <li class="article__title font-serif text-2xl py-4 md:text-4xl">
+    <a class="underline" href="{{ entry.url | url }}">{{ entry.title }}</a>
+  </li>
+  {%- endfor %}
+</ul>
