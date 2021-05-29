@@ -1,12 +1,10 @@
 ---
-layout: layouts/home.njk
+title: Archive
+layout: layouts/sidenav-col.njk
 permalink: /posts/
 eleventyNavigation:
   key: Articles
   order: 2
 ---
-
-<h1>Archive</h1>
-
 {% set postslist = collections.posts %}
 {% include "postslist.njk" %}

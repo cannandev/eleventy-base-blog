@@ -45,7 +45,7 @@
 		{% if featuredPost.data.image %}
 		<div class="border-t border-b border-gray-200 md:absolute md:bg-white md:inset-y-0 md:right-0 md:w-5/12">
 			<img class="hero__img h-auto w-full object-cover md:h-96 lg:w-full lg:h-full"
-				src="/img/{{ featuredPost.data.image.file | urlencode }}" alt="{{ featuredPost.data.image.alttext }}" />
+				src="/img/{{ featuredPost.data.image.src | urlencode }}" alt="{{ featuredPost.data.image.alt }}" />
 		</div>
 		{% endif %}
 		{% endif %}
