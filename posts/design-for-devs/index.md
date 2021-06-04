@@ -1,7 +1,7 @@
 ---
 title: Design for Devs
 layout: layouts/category.njk
-templateClass: tmpl-category
+parent: Articles
 image:
   src: pen-tool-amico.svg
   alt: lorem ipsum credit

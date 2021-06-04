@@ -1,7 +1,7 @@
 ---
 title: Fireside Chats
 layout: layouts/category.njk
-templateClass: tmpl-category
+parent: Articles
 image:
   src: diverse-women.jpg
   alt: lorem ipsum
