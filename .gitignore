@@ -1,5 +1,6 @@
 _site/
 _tmp/
+_drafts/
 node_modules/
 .DS_Store
 .vscode/
