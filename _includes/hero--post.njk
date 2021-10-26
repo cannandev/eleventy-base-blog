@@ -1,41 +1,13 @@
-<section class="md:relative bg-black overflow-hidden" aria-label="Featured article">
-	<article id="hero--featured"
+<section class="md:relative bg-black overflow-hidden" aria-label="article">
+	<article id="hero--post"
 		class="max-w-7xl mx-auto bg-black flex flex-col justify-between md:flex-row md:items-center md:py-0"
 		aria-labelledby="article-title">
 		<div
-			class="article__container flex flex-col space-y-6 px-4 py-16 justify-around items-start text-white md:w-7/12 {% if image %}md:h-96{% endif %}">
+			class="article__container flex flex-col space-y-6 px-4 py-16 justify-around items-start text-white md:mx-auto md:w-8/12 md:px-0">
 			<span
 				class="article__category-tuts text-white px-2 py-1 text-xs bg-red-800 uppercase tracking-widest">{{ parent }}</span>
 			<h1 class="article__title font-serif text-4xl md:text-5xl md:pt-8">{{ title }}</h1>
-			<ul class="article__meta flex flex-row space-x-6 text-xs uppercase">
-				<li><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline mr-1 align-text-bottom" fill="none"
-						viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-							d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-					</svg>
-					<time class="postlist-date" datetime="{{ date | htmlDateString }}">{{ date | postDate }}</time>
-				</li>
-				<li><svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 inline mr-1 align-text-bottom" viewBox="0 0 20 20"
-						fill="currentColor">
-						<path
-							d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
-					</svg>
-					<span>111 Shares</span>
-				</li>
-				<li><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline mr-1 align-text-bottom" fill="none"
-						viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-							d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-					</svg>
-					<span>{{ content | timeToRead }} read</span>
-				</li>
-			</ul>
+			{% include "hero__meta.njk" %}
 		</div>
-		{% if image %}
-		<div class="border-t border-b border-gray-200 md:absolute md:bg-white md:inset-y-0 md:right-0 md:w-5/12">
-			<img class="hero__img h-auto w-full object-cover md:h-96 lg:w-full lg:h-full"
-				src="/img/{{ image.src | urlencode }}" alt="{{ image.alt }}" />
-		</div>
-		{% endif %}
 	</article>
 </section>
