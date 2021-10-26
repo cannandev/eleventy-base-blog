@@ -1,9 +1,9 @@
 ---
-title: About me
+title: Portfolio
 layout: layouts/single-col.njk
 eleventyNavigation:
-  key: About
-  order: 5
+  key: Portfolio
+  order: 2
 image:
   src: cartoon-professional-claire.png
   alt: Claire as a professional cartoon. Made by befunky.
