@@ -1,7 +1,8 @@
 {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
 {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
 {%- if nextPost or previousPost %}
-<ul class="flex justify-between max-w-7xl mx-auto px-4 sm:px-6 py-16">
+<ul
+  class="flex justify{%- if previousPost %}-between{%- else %}-end{%- endif %} max-w-7xl mx-auto px-4 sm:px-6 py-16">
   {%- if previousPost %}
   <li class="border">
     <a class="block max-w-sm h-full" href="{{ previousPost.url | url }}">
