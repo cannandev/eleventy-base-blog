@@ -1,9 +1,23 @@
 {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
 {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
 {%- if nextPost or previousPost %}
-<ul>
-  {%- if nextPost %}<li>Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-  {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{%
-  endif %}
+<ul class="flex justify-between max-w-7xl mx-auto px-4 sm:px-6 py-16">
+  {%- if previousPost %}
+  <li class="border">
+    <a class="block max-w-sm h-full" href="{{ previousPost.url | url }}">
+      <span>&mdash; Previous article </span>
+      <h5 class="text-2xl font-serif font-semibold">{{ previousPost.data.title }}</h5>
+    </a>
+  </li>
+  {% endif %}
+
+  {%- if nextPost %}
+  <li class="border">
+    <a class="block max-w-sm h-full text-right" href="{{ nextPost.url | url }}">
+      <span>&mdash; Next article </span>
+      <h5 class="text-2xl font-serif font-semibold">{{ nextPost.data.title }}</h5>
+    </a>
+  </li>
+  {% endif %}
 </ul>
 {%- endif %}
