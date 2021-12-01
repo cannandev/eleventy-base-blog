@@ -4,18 +4,18 @@
 <ul
   class="flex justify{%- if previousPost %}-between{%- else %}-end{%- endif %} max-w-7xl mx-auto px-4 sm:px-6 py-16">
   {%- if previousPost %}
-  <li class="border">
+  <li>
     <a class="block max-w-sm h-full" href="{{ previousPost.url | url }}">
-      <span>&mdash; Previous article </span>
+      <span class="widget__title no-underline">&mdash; Previous article </span>
       <h5 class="text-2xl font-serif font-semibold">{{ previousPost.data.title }}</h5>
     </a>
   </li>
   {% endif %}
 
   {%- if nextPost %}
-  <li class="border">
+  <li>
     <a class="block max-w-sm h-full text-right" href="{{ nextPost.url | url }}">
-      <span>&mdash; Next article </span>
+      <span class="widget__title no-underline">Next article &mdash;</span>
       <h5 class="text-2xl font-serif font-semibold">{{ nextPost.data.title }}</h5>
     </a>
   </li>
