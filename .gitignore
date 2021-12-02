@@ -5,3 +5,4 @@ node_modules/
 .DS_Store
 .vscode/
 design.md
+cypress/tests.md
