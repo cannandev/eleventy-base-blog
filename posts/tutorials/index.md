@@ -5,6 +5,7 @@ parent: Articles
 image:
   src: instruction-manual-pana.svg
   alt: Motherhood vector created by pch.vector - www.freepik.com
+eleventyExcludeFromCollections: true
 ---
 
 How to do things. Mainly, notes to myself so I'll remember how to do the things.
