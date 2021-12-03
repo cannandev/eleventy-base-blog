@@ -4,5 +4,8 @@ _drafts/
 node_modules/
 .DS_Store
 .vscode/
+blog.code-workspace
 design.md
 cypress/tests.md
+cypress/videos/
+cypress/screenshots/
