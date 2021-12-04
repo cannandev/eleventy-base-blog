@@ -3,7 +3,11 @@ layout: layouts/sidenav-col.njk
 templateClass: tmpl-category
 ---
 
-<div class="py-10">{{ content | safe }}</div>
+<div class="py-10">
+  <main id="main-content" class="prose" aria-label="{{ title }}">
+  {{ content | safe }}
+  </main>
+</div>
 
 {% set navPages = collections.all | eleventyNavigation( title ) | reverse %}
 {% include "list.njk" %}

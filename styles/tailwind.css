@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  .prose h2 {
+    @apply font-serif font-bold text-2xl mb-8;
+  }
+  .prose p {
+    @apply mb-8;
+  }
+  .prose a {
+    @apply underline;
+  }
+}
+
 @layer utilities {
   .change {
     color: transparent;
