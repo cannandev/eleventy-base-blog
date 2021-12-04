@@ -5,7 +5,9 @@ templateClass: tmpl-post
 {% include "hero--post.njk" %}
 
 <div class="max-w-4xl mx-auto px-4 pt-16 pb-0 text-lg md:text-xl md:py-16">
+  <main id="main-content" class="prose" aria-label="{{ title }}">
   {{ content | safe }}
+  </main>
   {% include "post__tags.njk" %}
 </div>
 

@@ -47,6 +47,12 @@ npm install
 npx eleventy
 ```
 
+Or compile the tailwind.css file and serve
+
+```
+npm start
+```
+
 Or build and host locally for local development
 
 ```
