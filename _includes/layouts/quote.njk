@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-quote
+---
+
+{% include "quote__login-bar.njk" %}
+{% include "hero--quote.njk" %}
+
+<div class="max-w-4xl mx-auto px-4 pt-16 pb-0 text-lg md:text-xl md:py-16">
+  <main id="main-content" class="prose" aria-label="{{ title }}">
+  <h2>Search</h2>
+  {% include "quote__search.njk" %}
+  <h2>Add new form</h2>
+  {% include "quote__add-new.njk" %}
+  <h2>Tag cloud</h2>
+  {% include "quote__tags.njk" %}
+  <h2>Quote</h2>
+  {% include "quote__single-quote.njk" %}
+  </main>
+</div>

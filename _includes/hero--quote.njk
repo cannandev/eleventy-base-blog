@@ -1,0 +1,14 @@
+<section class="md:relative bg-black overflow-hidden" aria-label="Quote hero">
+	<article id="hero--quote"
+		class="max-w-7xl mx-auto bg-black flex flex-col justify-between md:flex-row md:items-center md:py-0"
+		aria-labelledby="article-title">
+		<div class="article__container flex flex-col space-y-6 px-4 py-16 justify-around items-start text-white md:w-7/12">
+			<h1 class="article__title font-serif text-4xl md:text-5xl md:pt-8"> {{ title }} </h1>
+			<p class="article__description text-lg md:text-xl md:pb-8">{{ content | safe }}</p>
+		</div>
+		<div class="border-t border-b border-gray-200 md:absolute md:bg-white md:inset-y-0 md:right-0 md:w-5/12">
+			<img class="hero__img h-auto w-full object-cover md:h-96 lg:w-full lg:h-full"
+				src="/img/quotes-curved-colors.jpg" alt="Frame vector created by starline - www.freepik.com" />
+		</div>
+	</article>
+</section>
