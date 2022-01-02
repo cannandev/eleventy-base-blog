@@ -9,3 +9,18 @@ mobileToggle.addEventListener('click', e => {
     icon.classList.contains('block') ? icon.classList.replace('block', 'hidden') : icon.classList.replace('hidden', 'block')
   })
 })
+
+// Quotes components accordion
+
+/**
+ * 1. Delegate event handler on closest h2
+ * 2. Toggle 'hidden' class on next sibling
+ *
+ * */
+
+const components = document.getElementById('quote__components')
+
+components.addEventListener('click', e => {
+  const container = e.target.nextElementSibling
+  container.toggleAttribute('hidden')
+})
