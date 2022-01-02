@@ -12,15 +12,17 @@ mobileToggle.addEventListener('click', e => {
 
 // Quotes components accordion
 
-/**
- * 1. Delegate event handler on closest h2
- * 2. Toggle 'hidden' class on next sibling
- *
- * */
+const accordion = document.getElementById('quote__components')
 
-const components = document.getElementById('quote__components')
+if (accordion)
+{
+  accordion.addEventListener('click', e => {
+    const accordionHeader = e.target.closest('H2')
 
-components.addEventListener('click', e => {
-  const container = e.target.nextElementSibling
-  container.toggleAttribute('hidden')
-})
+    if (!accordionHeader) return
+
+    const container = accordionHeader.nextElementSibling
+    // console.log(accordionHeader.textContent + " is toggled")
+    container.toggleAttribute('hidden')
+  })
+}
