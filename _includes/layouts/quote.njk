@@ -6,17 +6,6 @@ templateClass: tmpl-quote
 {% include "quote__login-bar.njk" %}
 {% include "hero--quote.njk" %}
 
-<div id="quote__components" class="max-w-4xl mx-auto px-4 pt-16 pb-0 text-lg md:text-xl md:py-16">
-  <main id="main-content" aria-label="{{ title }}">
-  <h2 class="block p-2 mb-6 border cursor-pointer">Search</h2>
-  <div hidden>{% include "quote__search.njk" %}</div>
-  <h2 class="block p-2 mb-6 border cursor-pointer">Add new form</h2>
-  <div hidden>{% include "quote__add-new.njk" %}</div>
-  <h2 class="block p-2 mb-6 border cursor-pointer">Tag cloud</h2>
-  <div hidden>{% include "quote__tags.njk" %}</div>
-  <h2 class="block p-2 mb-6 border cursor-pointer">Quote with Actions Bar</h2>
-  <div hidden>{% include "quote__single-quote.njk" %}</div>
-  <h2 class="block p-2 mb-6 border cursor-pointer">Title Bar with Sort</h2>
-  <div hidden>{% include "quote__title-bar.njk" %}</div>
-  </main>
-</div>
+<main id="main-content" aria-label="{{ title }}" class="max-w-4xl mx-auto px-4 pt-16 pb-0 text-lg md:text-xl md:py-16">
+  {{ content | safe }}
+</main>
