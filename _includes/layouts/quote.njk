@@ -7,5 +7,11 @@ templateClass: tmpl-quote
 {% include "hero--quote.njk" %}
 
 <main id="main-content" aria-label="{{ title }}" class="max-w-4xl mx-auto px-4 pt-16 pb-0 text-lg md:text-xl md:py-16">
+  {% include "quote__title-bar.njk" %}
+
+  {# Results #}
+  {% include "quote__single-quote.njk" %}
+
+  {# Markdown content (if any) #}
   {{ content | safe }}
 </main>
