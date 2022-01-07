@@ -15,8 +15,10 @@ templateClass: tmpl-quote
       id: quote._id,
       title: quote.title,
       author: quote.author,
-      text: quote.quote.text,
-      page: quote.quote.page
+      text: quote.text,
+      page: quote.page,
+      type: quote.type,
+      link: quote.link
     } %}
     {% include "quote__single-quote.njk" %}
   {% endfor %}
