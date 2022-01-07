@@ -9,3 +9,4 @@ design.md
 cypress/tests.md
 cypress/videos/
 cypress/screenshots/
+.env
