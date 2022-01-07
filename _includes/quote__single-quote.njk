@@ -1,7 +1,15 @@
 <div class="quote__container mb-6 flex">
   <div id="quote-{{ quoteData.id }}" class="ml-24 mr-10">
     <p class="font-serif">{{ quoteData.text }}</p>
-    <cite class="text-sm">by <a href="#"><strong>{{ quoteData.author }}</strong></a> from <em>{{ quoteData.title }}</em>, {{ quoteData.page }}</cite>
+    <cite class="text-sm">by <a href="#"><strong>{{ quoteData.author }}</strong></a> from <em>{{ quoteData.title }}</em>, page {{ quoteData.page }}
+    {% if quoteData.type == "book" %}
+      {% include "svg/book.svg" %}
+    {% elif quoteData.type == "magazine" %}
+      {% include "svg/magazine.svg" %}
+    {% else %}
+      {% include "svg/internet.svg" %}
+    {% endif %}
+    </cite>
   </div>
   {% include "quote__actions-bar.njk" %}
 </div>
