@@ -1,9 +1,7 @@
 <div class="quote__container mb-6 flex">
-  <div id="quote-{{id}}" class="ml-24 mr-10">
-    <p class="font-serif">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis placeat incidunt cumque obcaecati
-      magnam ipsa facilis cum asperiores, mollitia alias provident odio recusandae beatae exercitationem illo? Fuga harum
-      reprehenderit minima?</p>
-    <cite class="text-sm">by <a href="#"><strong>Author Name</strong></a> from <em>Title of Reference Work</em>, page 46</cite>
+  <div id="quote-{{ quoteData.id }}" class="ml-24 mr-10">
+    <p class="font-serif">{{ quoteData.text }}</p>
+    <cite class="text-sm">by <a href="#"><strong>{{ quoteData.author }}</strong></a> from <em>{{ quoteData.title }}</em>, {{ quoteData.page }}</cite>
   </div>
   {% include "quote__actions-bar.njk" %}
 </div>

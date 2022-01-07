@@ -9,8 +9,17 @@ templateClass: tmpl-quote
 <main id="main-content" aria-label="{{ title }}" class="max-w-4xl mx-auto px-4 pt-16 pb-0 text-lg md:text-xl md:py-16">
   {% include "quote__title-bar.njk" %}
 
-  {# Results #}
-  {% include "quote__single-quote.njk" %}
+  {# Loop through quotes. See _data/quotes.js #}
+  {% for quote in quotes.documents %}
+    {% set quoteData = {
+      id: quote._id,
+      title: quote.title,
+      author: quote.author,
+      text: quote.quote.text,
+      page: quote.quote.page
+    } %}
+    {% include "quote__single-quote.njk" %}
+  {% endfor %}
 
   {# Markdown content (if any) #}
   {{ content | safe }}

@@ -41,6 +41,11 @@ npm install
 
 ### 4. Edit _data/metadata.json
 
+### 4b. Add .env file
+
+Used by _data/quotes.js in data connection.
+
+
 ### 5. Run Eleventy
 
 ```
@@ -50,7 +55,7 @@ npx eleventy
 Or compile the tailwind.css file and serve
 
 ```
-npm start
+npm run start
 ```
 
 Or build and host locally for local development
@@ -87,14 +92,15 @@ DEBUG=* npx eleventy
 
 ### Inspiration
 
-[Mannequin theme](https://squaretypetheme.com/mannequin/)
-[Freepik Vector images](https://www.freepik.com/)
+* [Mannequin theme](https://squaretypetheme.com/mannequin/)
+* [Freepik Vector images](https://www.freepik.com/)
 
 ### References
 
-[Tailwind CSS & Eleventy](https://css-tricks.com/eleventy-starter-with-tailwind-css-alpine-js/)
-[Intelligent Tailwind CSS tooling for VS Code](https://github.com/tailwindlabs/tailwindcss-intellisense)
-[Tailwind Extracting Components](https://tailwindcss.com/docs/extracting-components)
-[Civic Actions Pa11y-CI Github Action](https://accessibility.civicactions.com/posts/automated-accessibility-testing-leveraging-github-actions-and-pa11y-ci-with-axe)
-[Local pa11y integration](https://github.com/t12t/t12t.github.io/blob/main/package.json)
-[Minified Javascript with Terser](https://www.11ty.dev/docs/quicktips/inline-js/)
+* [Tailwind CSS & Eleventy](https://css-tricks.com/eleventy-starter-with-tailwind-css-alpine-js/)
+* [Intelligent Tailwind CSS tooling for VS Code](https://github.com/tailwindlabs/tailwindcss-intellisense)
+* [Tailwind Extracting Components](https://tailwindcss.com/docs/extracting-components)
+* [Civic Actions Pa11y-CI Github Action](https://accessibility.civicactions.com/posts/automated-accessibility-testing-leveraging-github-actions-and-pa11y-ci-with-axe)
+* [Local pa11y integration](https://github.com/t12t/t12t.github.io/blob/main/package.json)
+* ~~[Minified Javascript with Terser](https://www.11ty.dev/docs/quicktips/inline-js/)~~
+* [Using 11ty JavaScript Data Files](https://bryanlrobinson.com/blog/using-eleventys-javascript-data-files/)
