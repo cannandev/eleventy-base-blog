@@ -3,10 +3,11 @@ layout: layouts/base.njk
 templateClass: tmpl-quote
 ---
 
-{% include "quote__login-bar.njk" %}
 {% include "hero--quote.njk" %}
 
 <main id="main-content" aria-label="{{ title }}" class="max-w-4xl mx-auto px-4 pt-16 pb-0 text-lg md:text-xl md:py-16">
+
+{% if page.url == "/quotes/" %}
   {% include "quote__title-bar.njk" %}
 
   {# Loop through quotes. See _data/quotes.js #}
@@ -23,6 +24,11 @@ templateClass: tmpl-quote
     {% include "quote__single-quote.njk" %}
   {% endfor %}
 
+{% elif page.url == "/quotes/add/" %}
+  {% include "quote__add-new.njk" %}
+{% else  %}
   {# Markdown content (if any) #}
   {{ content | safe }}
+{% endif %}
+
 </main>

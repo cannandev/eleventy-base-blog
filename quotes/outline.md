@@ -1,9 +1,8 @@
 ---
 layout: "layouts/quote.njk"
 title: Ship Quotes - App Outline
-description:
+description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aspernatur
 ---
-
 ## User Interface
 
 Pure Javascript for interactions. TailwindCSS styles. Lightning fast and accessible.
