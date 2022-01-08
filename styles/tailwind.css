@@ -28,7 +28,7 @@
 
 @layer components {
   .btn {
-    @apply uppercase border border-white bg-black text-white px-8 py-3 text-xs tracking-widest;
+    @apply uppercase border border-white bg-black text-white px-8 py-3 text-xs tracking-widest hover:bg-gray-900;
   }
   .widget__title {
     @apply text-xs font-medium text-gray-900 uppercase underline py-6 leading-loose;
