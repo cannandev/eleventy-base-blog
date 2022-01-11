@@ -1,7 +1,3 @@
-const quotes = require('../../_data/quotes')
-
-console.log('hello there quotes!', quotes)
-
 // Mobile Menu
 const mobileToggle = document.getElementById('mobileToggle')
 const mobileMenu = document.getElementById('mobile-menu')
@@ -30,4 +26,3 @@ if (accordion)
     container.toggleAttribute('hidden')
   })
 }
-

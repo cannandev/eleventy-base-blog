@@ -1,4 +1,4 @@
-var axios = require('axios');
+const axios = require('axios');
 
 module.exports = function () {
   let data = JSON.stringify({
@@ -21,7 +21,7 @@ module.exports = function () {
 
   return axios(config)
     .then(function (response) {
-      console.log(JSON.stringify(response.data));
+      console.log('All Quotes:', JSON.stringify(response.data));
       return response.data;
     })
     .catch(function (error) {

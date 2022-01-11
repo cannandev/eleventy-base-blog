@@ -27,8 +27,7 @@
       {% include "js/main.js" %}
     {% endset %}
     {# feed JS through jsmin filter to minify #}
-    <script type="module">
-      {{ js | jsmin | safe }}
+    <script type="module" src="/js/main.js">
     </script>
   </body>
 

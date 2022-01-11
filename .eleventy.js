@@ -144,6 +144,9 @@ module.exports = function (eleventyConfig) {
     }
   });
 
+  // Copy the `js` folders to the output. Main.js has grown too big to minify.
+  eleventyConfig.addPassthroughCopy("js");
+
   return {
     // Control which files Eleventy will process
     // e.g.: *.md, *.njk, *.html, *.liquid
