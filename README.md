@@ -104,3 +104,5 @@ DEBUG=* npx eleventy
 * [Local pa11y integration](https://github.com/t12t/t12t.github.io/blob/main/package.json)
 * ~~[Minified Javascript with Terser](https://www.11ty.dev/docs/quicktips/inline-js/)~~
 * [Using 11ty JavaScript Data Files](https://bryanlrobinson.com/blog/using-eleventys-javascript-data-files/)
+* [Heroicons by Tailwindcss](https://heroicons.com/)
+* [Rollup JS module bundler](https://rollupjs.org/guide/en/)
