@@ -106,3 +106,4 @@ DEBUG=* npx eleventy
 * [Using 11ty JavaScript Data Files](https://bryanlrobinson.com/blog/using-eleventys-javascript-data-files/)
 * [Heroicons by Tailwindcss](https://heroicons.com/)
 * [Rollup JS module bundler](https://rollupjs.org/guide/en/)
+* [Rollup Terser plugin](https://www.npmjs.com/package/rollup-plugin-terser)
