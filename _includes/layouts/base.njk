@@ -22,10 +22,6 @@
     <footer class="bg-black text-white">
       {% include "footer.njk" %}
     </footer>
-    {# capture the JS content as a Nunjucks variable #}
-    {% set js %}
-      {% include "js/main.js" %}
-    {% endset %}
     {# feed JS through jsmin filter to minify #}
     <script type="module" src="/dist/bundle.js">
     </script>
