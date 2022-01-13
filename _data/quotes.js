@@ -21,7 +21,7 @@ module.exports = function () {
 
   return axios(config)
     .then(function (response) {
-      console.log('All Quotes:', JSON.stringify(response.data));
+      console.log('quotes data loaded from db');
       return response.data;
     })
     .catch(function (error) {
