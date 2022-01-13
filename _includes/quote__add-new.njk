@@ -1,27 +1,26 @@
-<form action="https://getform.io/f/bc739ef0-73e3-4460-8e20-d9eac25cde85" method="POST"
+<form action="" method="POST"
   class="flex flex-col mb-12" id="form__quote-add">
   <label class="" for="quote">Quote text (required)</label>
-  <textarea name="message" id="message" cols="30" rows="10" class="border p-4 mb-4 font-serif"></textarea>
+  <textarea name="text" id="text" cols="30" rows="10" class="border p-4 mb-4 font-serif"></textarea>
   <label class="" for="author">Author</label>
   <input type="text" name="author" class="border p-4 mb-4 font-serif">
   <label class="" for="title">Title</label>
   <input type="text" name="title" class="border p-4 mb-4 font-serif">
   <label class="" for="page">Page number</label>
   <input type="number" name="page" maxlength="4" class="w-1/6 border p-4 mb-4 font-serif">
-  <label class="" for="reftype">Reference type</label>
-  <select name="reftype" id="reftype" class="border p-4 mb-4">
-    <option value=" Book">Book</option>
-    <option value="Blog article">Blog article</option>
-    <option value="Magazine article">Magazine article</option>
+  <label class="" for="type">Reference type</label>
+  <select name="type" id="type" class="border p-4 mb-4">
+    <option value="book">Book</option>
+    <option value="blog">Blog article</option>
+    <option value="mag">Magazine article</option>
   </select>
   <label class="" for="link">Learn more link</label>
   <input type="url" name="link" class="border p-4 mb-4 font-serif">
   <label class="" for="subject">Subject tags</label>
   <input type="text" name="subject" class="border p-4 mb-4 font-serif">
-  <label class=" text-gray-500" for="date">Date (auto)</label>
-  <input disabled type="date" name="date" class="w-1/3 border p-4 mb-4 text-gray-500 font-serif">
   <div class="flex justify-end">
     <button type="reset" class="btn">Reset</button>
     <button type="submit" class="btn">Submit</button>
   </div>
 </form>
+<p id="form__quote-success"></p>
