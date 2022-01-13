@@ -75,6 +75,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("version", function () {
     return String(Date.now());
   });
+  eleventyConfig.addShortcode("currentYear", function () {
+    return DateTime.now().toFormat('yyyy');
+  });
 
   eleventyConfig.addFilter('htmlmin', function (content, outputPath) {
     if (
