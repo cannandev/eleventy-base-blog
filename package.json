@@ -7,7 +7,7 @@
     "build-dev:scripts": "rollup -c",
     "watch": "eleventy --watch",
     "serve": "eleventy --serve",
-    "start": "eleventy --serve & postcss styles/tailwind.css --o _tmp/style.css --watch",
+    "start": "eleventy --serve & rollup -c & postcss styles/tailwind.css --o _tmp/style.css --watch",
     "debug": "DEBUG=* eleventy",
     "test-pa11y": "pa11y-ci",
     "test-pa11y:sitemap": "pa11y-ci --sitemap http://localhost:8080/sitemap.xml --sitemap-exclude \"/*.pdf\""
