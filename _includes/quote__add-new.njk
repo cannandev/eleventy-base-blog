@@ -1,9 +1,9 @@
-<form action="" method="POST"
+<form action="#" method="POST"
   class="flex flex-col mb-12" id="form__quote-add">
   <label class="" for="quote">Quote text (required)</label>
-  <textarea name="text" id="text" cols="30" rows="10" class="border p-4 mb-4 font-serif"></textarea>
-  <label class="" for="author">Author</label>
-  <input type="text" name="author" class="border p-4 mb-4 font-serif">
+  <textarea required name="text" id="text" cols="30" rows="10" class="border p-4 mb-4 font-serif" aria-required="true" ></textarea>
+  <label class="" for="author">Author (required)</label>
+  <input required type="text" name="author" class="border p-4 mb-4 font-serif" aria-required="true" >
   <label class="" for="title">Title</label>
   <input type="text" name="title" class="border p-4 mb-4 font-serif">
   <label class="" for="page">Page number</label>
