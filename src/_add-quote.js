@@ -1,3 +1,5 @@
+import DOMPurify from 'dompurify'
+
 // Add a quote to the Mongodb collection
 const quoteForm = document.getElementById('form__quote-add')
 const quoteSubmit = quoteForm.getElementsByTagName('button')[1]
@@ -17,8 +19,7 @@ const validateForm = form => {
     // If the form element has a name property (which buttons do not) sanitize, trim and add to the object.
     if (element.name)
     {
-      // DomSanitize here
-      quoteObject[element.name] = element.value.trim()
+      quoteObject[element.name] = DOMPurify.sanitize(element.value.trim())
     }
   }
   console.log('quoteObject', quoteObject)
@@ -29,8 +30,9 @@ quoteForm.addEventListener('submit', e => {
   e.preventDefault()
   if (!validateForm()) return
   quoteForm.submit()
-  // sendForm(quoteForm.action, { quoteDocument })
+  // TODO: sendForm(quoteForm.action, { quoteDocument })
   quoteForm.nextElementSibling.textContent = `Your quote has been successfully submitted.`
+  // TODO: reset form here
 })
 
 
@@ -43,7 +45,7 @@ quoteForm.addEventListener('submit', e => {
 //   "type": quoteForm.refType,
 //   "page": quoteForm.page,
 //   "link": quoteForm.link,
-//   "subject": [quoteForm.tags],
+//   "subjects": [quoteForm.tags],
 //   "date_added": Date.now(),
 // }
 
