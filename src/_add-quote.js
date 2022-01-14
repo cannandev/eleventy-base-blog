@@ -12,13 +12,11 @@ quoteSubmit.addEventListener('click', e => {
 const validateForm = form => {
   const quoteObject = {}
   // Use a for loop instead of forEach, since `form.elements` is an object, not an array.
-  for (let i = 0; i < form.length; i++)
-  {
+  for (let i = 0; i < form.length; i++) {
     const element = form[i];
 
     // If the form element has a name property (which buttons do not) sanitize, trim and add to the object.
-    if (element.name)
-    {
+    if (element.name) {
       quoteObject[element.name] = DOMPurify.sanitize(element.value.trim())
     }
   }

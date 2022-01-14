@@ -107,3 +107,4 @@ DEBUG=* npx eleventy
 * [Heroicons by Tailwindcss](https://heroicons.com/)
 * [Rollup JS module bundler](https://rollupjs.org/guide/en/)
 * [Rollup Terser plugin](https://www.npmjs.com/package/rollup-plugin-terser)
+* [Sanitize form fields with DOMPurify](https://github.com/cure53/DOMPurify)
