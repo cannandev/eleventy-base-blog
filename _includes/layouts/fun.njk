@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or metadata.title }}</title>
+    <meta name="description" content="{{ description or metadata.description }}">
+    <link rel="stylesheet" href="/style.css?v={% version %}" />
+    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml"
+      title="{{ metadata.title }}">
+    <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json"
+      title="{{ metadata.title }}">
+    <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="/img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Inter&family=Mulish:wght@900&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header class="h-screen">
+      <a href="#main-content" alt="Skip link" class="sr-only focus:not-sr-only">Skip to main content</a>
+      <div class="container">
+        <div class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
+          <div class="flex justify-between md:w-0 md:flex-1">
+            <a href="{{ '/' | url }}">
+              <span class="sr-only">{{ metadata.title }}</span>
+              <img class="h-8 w-auto sm:h-10" src="/img/logo-black.png" alt="Home">
+            </a>
+            <nav class="flex flex-row">
+              <a href="/articles/">articles</a>
+              <a href="/">talks</a>
+              <a href="/">about</a>
+              <a href="/">contact</a>
+            </nav>
+          </div>
+        </div>
+        <div class="flex flex-column">
+          <div class="self-end justify-self-end md:w-1/2">
+            <p class="font-hand text-2xl font-bold"><span role="img" aria-label="hand waving dark skin tone">👋🏾</span>Hi, I'm Claire Annan!</p>
+            <h1 class="font-display text-6xl">I'm a consulting software engineer. I like to <a href="/">talk</a> and <a
+                href="/">write</a> about
+              best
+              practices and
+              accessibility.</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main id="main-content" class="bg-keppel">
+      <div class="container">
+        <h2 class="font-display text-4xl text-center">Latest articles</h2>
+        {% set postslist = collections.posts | head(-3) | reverse %}
+        {% for post in postslist %}
+          <article class="w-auto md:w-1/3 p-5 mb-14 rounded bg-white">
+            <span class="bg-marigold text-xs font-body px-2 py-1 border-white border-2 rounded-2xl">{{ post.data.parent }}</span>
+            {% if post.templateContent %}
+            <span class="bg-white text-xs font-body px-2 py-1 border-gainsboro border-2 rounded-2xl">{{ post.templateContent | timeToRead }} read</span>
+            {% endif %}
+            <h2 class="font-display text-xl">{{ post.data.title }}</h2>
+            <p class="font-body">{{post.data.description}}</p>
+          </article>
+        {% endfor %}
+        <button class="btn">Read more articles</button>
+      </div>
+      {{ content | safe }}
+    </main>
+    <section class="bg-gainsboro">
+      <div class="container">
+        <h2 class="font-display text-4xl text-center">Tags</h2>
+        {% include "post__tags.njk" %}
+      </div>
+    </section>
+    <footer class="bg-black text-marigold">
+      <div class="container">
+        {% include "footer.njk" %}
+      </div>
+    </footer>
+  </body>
+
+</html>

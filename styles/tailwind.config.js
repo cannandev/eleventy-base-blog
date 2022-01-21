@@ -6,8 +6,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        change: 'transparent',
+        transparent: 'transparent',
+        cinnabar: '#EF3E36',
+        marigold: '#ECA400',
+        gainsboro: '#DBD9DB',
+        keppel: '#15B097',
+        darkPurple: '#22031F',
       },
+      fontFamily: {
+        'display': ['Mulish'],
+        'body': ['Inter'],
+        'hand': ['Gochi Hand'],
+      }
     },
   },
   variants: {

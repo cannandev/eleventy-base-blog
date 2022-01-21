@@ -33,4 +33,7 @@
   .widget__title {
     @apply text-xs font-medium text-gray-900 uppercase underline py-6 leading-loose;
   }
+  .container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6;
+  }
 }
