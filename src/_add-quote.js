@@ -17,34 +17,54 @@ const validateForm = form => {
       quoteObject[element.name] = DOMPurify.sanitize(element.value.trim())
     }
   }
-  console.log('quoteObject', quoteObject)
   if (Object.keys(quoteObject).length === 0) return false
-  return true
+  return quoteObject
 }
 // Show success message when form is submitted.
 quoteForm.addEventListener('submit', e => {
   e.preventDefault()
-  if (!validateForm(quoteForm.elements)) return
-  quoteForm.submit()
-  // TODO: sendForm(quoteForm.action, { quoteDocument })
-  quoteForm.nextElementSibling.textContent = `Your quote has been successfully submitted.`
-  // TODO: reset form here
+  const form = validateForm(quoteForm.elements)
+  if (form) {
+    // TODO: does this actually happen? quoteForm.submit()
+    console.log('sending quote: ', form)
+    sendForm(form)
+    quoteForm.nextElementSibling.textContent = `Your quote has been successfully submitted.`
+    // TODO: reset form here
+  }
+  else {
+    quoteForm.nextElementSibling.textContent = `There was a problem with your quote.`
+  }
 })
 
+/**
+ * Insert single quote object into mongodb collection via axios
+ * @See https://docs.atlas.mongodb.com/api/data-api-resources/#insert-a-single-document
+ * */
+const sendForm = quoteObject => {
+  let data = JSON.stringify({
+    "collection": "quotes",
+    "database": "bookclub",
+    "dataSource": "Cluster0",
+    "document": quoteObject
+  });
 
-// Get all field values into a JSON object
-// @See https://docs.atlas.mongodb.com/api/data-api-resources/#insert-a-single-document
-// const quoteDocument = {
-//   "text": quoteForm.text,
-//   "author": quoteForm.author,
-//   "title": quoteForm.title,
-//   "type": quoteForm.refType,
-//   "page": quoteForm.page,
-//   "link": quoteForm.link,
-//   "subjects": [quoteForm.tags],
-//   "date_added": Date.now(),
-// }
+  let config = {
+    method: 'post',
+    url: `https://data.mongodb-api.com/app/data-lxyfy/endpoint/data/beta/action/insertOne`,
+    headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Request-Headers': '*',
+      'api-key': "cuNbRsFdKK3NU1MKeXyHb1bNLe0yR9zPCY80bf24vbl2eJU7a36m9RLoRU4ank4O"
+    },
+    data: data
+  };
 
-// Insert object into collection via axios
-
-// Submit object via quote.js
+  return axios(config)
+    .then(function (response) {
+      console.log('inserted data: ', JSON.stringify(resonse.data));
+      return response.data;
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}

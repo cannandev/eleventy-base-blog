@@ -22,9 +22,8 @@
     <footer class="bg-black text-white">
       {% include "footer.njk" %}
     </footer>
-    {# feed JS through jsmin filter to minify #}
-    <script type="module" src="/dist/bundle.js">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="/dist/bundle.js"></script>
   </body>
 
 </html>

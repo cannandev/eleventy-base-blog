@@ -131,6 +131,13 @@ module.exports = function (eleventyConfig) {
     ghostMode: false
   });
 
+  eleventyConfig.setBrowserSyncConfig({
+    middleware: function (req, res, next) {
+      res.setHeader('Access-Control-Allow-Origin', '*');
+      next();
+    }
+  });
+
   return {
     // Control which files Eleventy will process
     // e.g.: *.md, *.njk, *.html, *.liquid
